@@ -18,14 +18,14 @@ const SOCIAL_LINKS = [
     icon: CodeXml,
   },
   {
-    label: 'X',
-    href: 'https://x.com/ianjure',
-    icon: Heart,
-  },
-  {
     label: 'Email',
     href: 'mailto:ianjure.data@email.com',
     icon: Mail,
+  },
+  {
+    label: 'X',
+    href: 'https://x.com/ianjure',
+    icon: Heart,
   },
 ];
 
@@ -136,11 +136,11 @@ export default function Home() {
         </div>
       </div>
       <HatchSeparator />
-      <div className="mx-2 mb-20 sm:mx-5">
-        <div className="mt-10 mb-6 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+      <div className="mx-2 mb-10 sm:mx-5">
+        <div className="mt-10 mb-6 flex flex-col items-center gap-6 text-center lg:flex-row lg:items-center lg:justify-between lg:text-left">
           <div className="text-base text-gray-500 sm:text-lg">GET IN TOUCH</div>
 
-          <nav className="flex flex-col items-start gap-4 text-base lg:flex-row lg:items-center lg:gap-12">
+          <nav className="flex flex-col items-center gap-2 text-base lg:flex-row lg:items-center lg:gap-10">
             {SOCIAL_LINKS.map((link) => {
               const Icon = link.icon;
 
@@ -150,7 +150,7 @@ export default function Home() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-zinc-500 transition-colors hover:text-black"
+                  className="flex items-center gap-2 text-gray-400 transition-colors hover:text-gray-600"
                 >
                   <Icon className="h-4 w-4" />
                   {link.label}

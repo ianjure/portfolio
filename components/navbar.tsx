@@ -26,7 +26,7 @@ export function Navbar() {
         sticky top-0 z-50
         border-b border-gray-300
         bg-white
-        px-2 sm:px-4 lg:px-40
+        px-2 sm:px-4 lg:px-60
         transition-shadow duration-300
         ${scrolled ? 'shadow-sm' : 'shadow-none'}
       `}

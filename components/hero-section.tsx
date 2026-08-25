@@ -14,7 +14,9 @@ import {
   SiSupabase,
   SiFirebase,
 } from 'react-icons/si';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
+import Link from 'next/link';
+import { CloudDownloadIcon, ExternalLinkIcon } from 'lucide-react';
 
 const techLogos = [
   {
@@ -112,43 +114,49 @@ const techLogos = [
 
 export default function Hero() {
   return (
-    <section className="flex min-h-[calc(100vh-65px)] items-center justify-center py-20">
+    <section className="flex min-h-[calc(100vh-65px)] items-center justify-center pt-45">
       <div className="mx-auto w-full max-w-6xl text-center">
-        <h1 className="text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl md:text-5xl lg:text-6xl px-4">
+        <h1 className="text-4xl text-stone-800 font-bold leading-[1.1] tracking-tight sm:text-5xl md:text-5xl lg:text-6xl px-4">
           Data. AI. Products.
-          <br className="font-italic" /> Built to solve real problems.
+          <br className="text-stone-800 font-italic" /> Built to solve real
+          problems.
         </h1>
 
-        <p className="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-gray-500 sm:text-lg md:text-xl px-4">
-          I’m a Data Scientist, AI Builder, and Product Thinker who transforms
-          complex problems into intelligent, practical products. From machine
-          learning models to full-stack applications, I bridge the gap between
-          technical possibilities and real-world impact.
+        <p className="mx-auto mt-10 max-w-3xl text-lg leading-relaxed text-gray-500 sm:text-lg md:text-xl px-4">
+          From machine learning models to full-stack applications, I bridge the
+          gap between technical possibilities and real-world impact.
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button className="h-14 rounded-lg bg-orange-500 px-7 text-base font-medium text-white shadow-sm transition-all hover:bg-orange-600 hover:shadow-md">
-            <a href="/Ian-Jure-Macalisang-CV.pdf" download>
-              Download my CV
-            </a>
-          </Button>
-
-          <Button
-            variant="ghost"
-            className="h-14 rounded-lg px-7 text-base font-medium text-gray-900 transition-colors hover:bg-transparent hover:text-gray-500"
+          <Link
+            href="/Ian-Jure-Macalisang-CV.pdf"
+            download
+            className={buttonVariants({
+              variant: 'default',
+              className:
+                'h-14 !border-0 bg-slate-500 px-7 text-base font-medium hover:bg-slate-600',
+            })}
           >
-            <a
-              href="https://linkedin.com/in/ianjuremacalisang"
-              className="flex items-center gap-2"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Let’s Connect!
-              <span aria-hidden="true">→</span>
-            </a>
-          </Button>
+            <CloudDownloadIcon aria-hidden="true" />
+            Download my CV
+          </Link>
+
+          <Link
+            href="https://linkedin.com/in/ianjuremacalisang"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonVariants({
+              variant: 'outline',
+              className:
+                'h-14 !border-1 !border-gray-500 px-7 text-base text-gray-500 font-medium hover:text-gray-600 hover:!border-gray-600 hover:bg-white',
+            })}
+          >
+            Let’s Connect
+            <ExternalLinkIcon aria-hidden="true" />
+          </Link>
         </div>
-        <div className="mt-26 px-2 sm:px-5">
+
+        <div className="mt-45 mb-20 px-2 sm:px-5">
           <LogoLoop
             logos={techLogos}
             speed={40}

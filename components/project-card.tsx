@@ -154,7 +154,7 @@ export default function ProjectCard({
         transition-all
         duration-300
         ease-[cubic-bezier(0.22,1,0.36,1)]
-        group-hover:w-8
+        group-hover:w-5
         group-hover:opacity-100
       "
               aria-hidden="true"
@@ -174,7 +174,7 @@ export default function ProjectCard({
             </span>
 
             {/* Title */}
-            <h3 className="text-xl font-semibold tracking-tight leading-tight sm:text-2xl text-stone-800">
+            <h3 className="text-lg font-semibold tracking-tight leading-tight sm:text-xl text-stone-800">
               {title}
             </h3>
           </div>
