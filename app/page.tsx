@@ -4,7 +4,7 @@ import ProjectCard from '@/components/project-card';
 import { Separator } from '@/components/ui/separator';
 
 import Link from 'next/link';
-import { Briefcase, CodeXml, Mail } from 'lucide-react';
+import { Briefcase, CodeXml, Heart, Mail } from 'lucide-react';
 
 const SOCIAL_LINKS = [
   {
@@ -16,6 +16,11 @@ const SOCIAL_LINKS = [
     label: 'GitHub',
     href: 'https://github.com/ianjure',
     icon: CodeXml,
+  },
+  {
+    label: 'X',
+    href: 'https://x.com/ianjure',
+    icon: Heart,
   },
   {
     label: 'Email',

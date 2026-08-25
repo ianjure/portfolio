@@ -137,8 +137,13 @@ export default function Hero() {
             variant="ghost"
             className="h-14 rounded-lg px-7 text-base font-medium text-gray-900 transition-colors hover:bg-transparent hover:text-gray-500"
           >
-            <a href="#projects" className="flex items-center gap-2">
-              View my work
+            <a
+              href="https://linkedin.com/in/ianjuremacalisang"
+              className="flex items-center gap-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Let’s Connect!
               <span aria-hidden="true">→</span>
             </a>
           </Button>
@@ -148,7 +153,7 @@ export default function Hero() {
             logos={techLogos}
             speed={40}
             direction="left"
-            logoHeight={50}
+            logoHeight={45}
             gap={60}
             hoverSpeed={0}
             scaleOnHover
