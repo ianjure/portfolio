@@ -102,7 +102,7 @@ export default function Home() {
               '/images/philnet-3.png',
               '/images/philnet-4.png',
             ]}
-            title="Multimodal Real-Time Phishing Detection System"
+            title="Real-Time Multimodal Phishing Detection System"
             award="TECHNICAL EXCELLENCE AWARD"
             name="PhiLNet"
             description="Protect users from phishing websites through fast, accurate, and robust detection via a browser extension."
