@@ -106,6 +106,7 @@ export default function Home() {
             award="TECHNICAL EXCELLENCE AWARD"
             name="PhiLNet"
             description="Protect users from phishing websites through fast, accurate, and robust detection via a browser extension."
+            href="/projects/philnet"
           />
           <ProjectCard
             mainImage="/images/cardioscope-main.png"
@@ -119,6 +120,7 @@ export default function Home() {
             award="BPI-DOST INNOVATION AWARDS 2025 WINNER"
             name="CardioScope"
             description="Support accessible cardiac screening by detecting abnormalities from phonocardiogram recordings."
+            href="/projects/cardioscope"
           />
           <ProjectCard
             mainImage="/images/paldo-main.png"
@@ -132,6 +134,7 @@ export default function Home() {
             award="YBLL 2.0 IDEATHON CHAMPION"
             name="Paldo"
             description="Help underserved MSMEs access suitable financing using alternative data beyond traditional credit history."
+            href="/projects/paldo"
           />
         </div>
       </div>

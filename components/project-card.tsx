@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import Link from 'next/link';
 
 interface ProjectCardProps {
   mainImage: string;
@@ -11,6 +12,7 @@ interface ProjectCardProps {
   name: string;
   description: string;
   interval?: number;
+  href: string;
 }
 
 export default function ProjectCard({
@@ -21,6 +23,7 @@ export default function ProjectCard({
   name,
   description,
   interval = 1800,
+  href,
 }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [isSlideshowActive, setIsSlideshowActive] = useState(false);
@@ -65,8 +68,9 @@ export default function ProjectCard({
   };
 
   return (
-    <Card
-      className="
+    <Link href={href} className="block cursor-pointer">
+      <Card
+        className="
         group
         w-full
         overflow-visible
@@ -75,15 +79,14 @@ export default function ProjectCard({
         shadow-none
         p-0
         [--card-spacing:0px]
-        cursor-pointer
     "
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {/* Image */}
-      <CardContent className="p-0">
-        <div
-          className="
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        {/* Image */}
+        <CardContent className="p-0">
+          <div
+            className="
             z-10
             relative
             w-full
@@ -97,12 +100,12 @@ export default function ProjectCard({
             ease-[cubic-bezier(0.22,1,0.36,1)]
             group-hover:scale-[1.008]
         "
-        >
-          {/* Main image */}
-          <img
-            src={mainImage}
-            alt={title}
-            className={`
+          >
+            {/* Main image */}
+            <img
+              src={mainImage}
+              alt={title}
+              className={`
                 absolute
                 inset-0
                 block
@@ -114,15 +117,15 @@ export default function ProjectCard({
                 ease-in-out
                 ${isSlideshowActive ? 'opacity-0' : 'opacity-100'}
                 `}
-          />
+            />
 
-          {/* Slideshow images */}
-          {images.map((image, index) => (
-            <img
-              key={`${image}-${index}`}
-              src={image}
-              alt=""
-              className={`
+            {/* Slideshow images */}
+            {images.map((image, index) => (
+              <img
+                key={`${image}-${index}`}
+                src={image}
+                alt=""
+                className={`
             absolute
             inset-0
             block
@@ -134,19 +137,19 @@ export default function ProjectCard({
             ease-in-out
             ${isSlideshowActive && index === currentSlide ? 'opacity-100' : 'opacity-0'}
           `}
-            />
-          ))}
-        </div>
-      </CardContent>
+              />
+            ))}
+          </div>
+        </CardContent>
 
-      {/* Footer */}
-      <CardFooter className="flex flex-col items-stretch gap-2 pt-4 bg-white border-0">
-        {/* Title + Award */}
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-          <div className="flex min-w-0 items-center">
-            {/* Arrow */}
-            <span
-              className="
+        {/* Footer */}
+        <CardFooter className="flex flex-col items-stretch gap-2 pt-4 bg-white border-0">
+          {/* Title + Award */}
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+            <div className="flex min-w-0 items-center">
+              {/* Arrow */}
+              <span
+                className="
         inline-flex
         w-0
         overflow-hidden
@@ -157,47 +160,48 @@ export default function ProjectCard({
         group-hover:w-5
         group-hover:opacity-100
       "
-              aria-hidden="true"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-4 w-4 shrink-0"
+                aria-hidden="true"
               >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-4 w-4 shrink-0"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </span>
 
-            {/* Title */}
-            <h3 className="text-lg font-semibold tracking-tight leading-tight sm:text-xl text-stone-800">
-              {title}
-            </h3>
+              {/* Title */}
+              <h3 className="text-lg font-semibold tracking-tight leading-tight sm:text-xl text-stone-800">
+                {title}
+              </h3>
+            </div>
+
+            {award && (
+              <span className="shrink-1 text-base font-medium text-gray-400 sm:text-right">
+                {award}
+              </span>
+            )}
           </div>
 
-          {award && (
-            <span className="shrink-1 text-base font-medium text-gray-400 sm:text-right">
-              {award}
-            </span>
-          )}
-        </div>
+          {/* Name + Description */}
+          <div className="text-base text-slate-500">
+            <span className="font-bold">{name}</span>
 
-        {/* Name + Description */}
-        <div className="text-base text-slate-500">
-          <span className="font-bold">{name}</span>
+            <span
+              aria-hidden="true"
+              className="mx-2 inline-block h-1 w-1 -translate-y-px rounded-full bg-slate-500"
+            />
 
-          <span
-            aria-hidden="true"
-            className="mx-2 inline-block h-1 w-1 -translate-y-px rounded-full bg-slate-500"
-          />
-
-          <span>{description}</span>
-        </div>
-      </CardFooter>
-    </Card>
+            <span>{description}</span>
+          </div>
+        </CardFooter>
+      </Card>
+    </Link>
   );
 }
