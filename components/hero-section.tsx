@@ -21,91 +21,91 @@ import { CloudDownloadIcon, ExternalLinkIcon } from 'lucide-react';
 const techLogos = [
   {
     node: (
-      <SiPython className="text-gray-400 transition-colors hover:text-gray-600" />
+      <SiPython className="text-gray-400 transition-colors duration-300 hover:text-[#3776AB]" />
     ),
     title: 'Python',
     href: 'https://www.python.org',
   },
   {
     node: (
-      <SiPytorch className="text-gray-400 transition-colors hover:text-gray-600" />
+      <SiPytorch className="text-gray-400 transition-colors duration-300 hover:text-[#EE4C2C]" />
     ),
     title: 'PyTorch',
     href: 'https://pytorch.org',
   },
   {
     node: (
-      <SiTensorflow className="text-gray-400 transition-colors hover:text-gray-600" />
+      <SiTensorflow className="text-gray-400 transition-colors duration-300 hover:text-[#FF6F00]" />
     ),
     title: 'TensorFlow',
     href: 'https://www.tensorflow.org',
   },
   {
     node: (
-      <SiPandas className="text-gray-400 transition-colors hover:text-gray-600" />
+      <SiPandas className="text-gray-400 transition-colors duration-300 hover:text-[#133C58]" />
     ),
     title: 'Pandas',
     href: 'https://pandas.pydata.org',
   },
   {
     node: (
-      <SiNumpy className="text-gray-400 transition-colors hover:text-gray-600" />
+      <SiNumpy className="text-gray-400 transition-colors duration-300 hover:text-[#013243]" />
     ),
     title: 'NumPy',
     href: 'https://numpy.org',
   },
   {
     node: (
-      <SiReact className="text-gray-400 transition-colors hover:text-gray-600" />
+      <SiReact className="text-gray-400 transition-colors duration-300 hover:text-[#61DAFB]" />
     ),
     title: 'React',
     href: 'https://react.dev',
   },
   {
     node: (
-      <SiNextdotjs className="text-gray-400 transition-colors hover:text-gray-600" />
+      <SiNextdotjs className="text-gray-400 transition-colors duration-300 hover:text-[#000000]" />
     ),
     title: 'Next.js',
     href: 'https://nextjs.org',
   },
   {
     node: (
-      <SiFastapi className="text-gray-400 transition-colors hover:text-gray-600" />
+      <SiFastapi className="text-gray-400 transition-colors duration-300 hover:text-[#009688]" />
     ),
     title: 'FastAPI',
     href: 'https://fastapi.tiangolo.com',
   },
   {
     node: (
-      <SiDocker className="text-gray-400 transition-colors hover:text-gray-600" />
+      <SiDocker className="text-gray-400 transition-colors duration-300 hover:text-[#2496ED]" />
     ),
     title: 'Docker',
     href: 'https://www.docker.com',
   },
   {
     node: (
-      <SiGithub className="text-gray-400 transition-colors hover:text-gray-600" />
+      <SiGithub className="text-gray-400 transition-colors duration-300 hover:text-[#181717]" />
     ),
     title: 'GitHub',
     href: 'https://github.com',
   },
   {
     node: (
-      <SiSupabase className="text-gray-400 transition-colors hover:text-gray-600" />
+      <SiSupabase className="text-gray-400 transition-colors duration-300 hover:text-[#3FCF8E]" />
     ),
     title: 'Supabase',
     href: 'https://supabase.com',
   },
   {
     node: (
-      <SiFirebase className="text-gray-400 transition-colors hover:text-gray-600" />
+      <SiFirebase className="text-gray-400 transition-colors duration-300 hover:text-[#DD2C00]" />
     ),
     title: 'Firebase',
     href: 'https://firebase.google.com',
   },
   {
     node: (
-      <SiFigma className="text-gray-400 transition-colors hover:text-gray-600" />
+      <SiFigma className="text-gray-400 transition-colors duration-300 hover:text-[#F24E1E]" />
     ),
     title: 'Figma',
     href: 'https://www.figma.com',

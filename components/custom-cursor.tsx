@@ -6,8 +6,29 @@ export default function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isPointer, setIsPointer] = useState(false);
   const [isNearEdge, setIsNearEdge] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+    const handleMediaChange = () => {
+      setIsDesktop(mediaQuery.matches);
+    };
+
+    handleMediaChange();
+    mediaQuery.addEventListener('change', handleMediaChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isDesktop) {
+      document.body.classList.remove('custom-cursor-active');
+      return;
+    }
+
     const edgeThreshold = 5;
 
     const move = (e: MouseEvent) => {
@@ -41,7 +62,9 @@ export default function CustomCursor() {
       document.removeEventListener('mousemove', move);
       document.body.classList.remove('custom-cursor-active');
     };
-  }, []);
+  }, [isDesktop]);
+
+  if (!isDesktop) return null;
 
   return (
     <img

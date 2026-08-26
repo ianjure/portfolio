@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Ian Jure Macalisang - Data Scientist, AI Builder, Product Thinker',
+  title: 'Ian Jure Macalisang • Data, AI, and Product',
   description:
     'Explore my skills, experience, and projects in data science, machine learning, and product development.',
 };
@@ -42,13 +42,13 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       <body className="min-h-full flex flex-col bg-white">
         <CustomCursor />
         <Navbar />
-        {/* Responsive margin: small on mobile, large on desktop */}
-        <div className="flex min-h-full flex-1 flex-col px-2 sm:px-4 lg:px-60">
-          {/* Black stroke frame */}
-          <div className="flex flex-1 flex-col overflow-hidden border-l-1 border-r-1 border-gray-300 bg-white">
+
+        <main className="flex flex-1 justify-center px-2 sm:px-4">
+          <div className="flex w-full max-w-[900px] flex-col border-l border-r border-gray-300 bg-white">
             {children}
           </div>
-        </div>
+        </main>
+
         <Footer />
       </body>
     </html>
