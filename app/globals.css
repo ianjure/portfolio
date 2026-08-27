@@ -130,8 +130,4 @@
   html {
     @apply font-mono;
   }
-
-  body.custom-cursor-active * {
-    cursor: none !important;
-  }
 }

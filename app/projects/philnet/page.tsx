@@ -14,7 +14,7 @@ export default function PhiLNetPage() {
         />
       </div>
 
-      <h1 className="text-xl font-semibold text-gray-500">
+      <h1 className="text-xl font-semibold text-[#0C0C0D]">
         PhiLNet protect users from phishing websites through fast, accurate, and
         robust detection via a browser extension.
       </h1>

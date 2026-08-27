@@ -1,128 +1,46 @@
-import LogoLoop from '@/components/logo-loop';
-import {
-  SiReact,
-  SiNextdotjs,
-  SiFigma,
-  SiPython,
-  SiPytorch,
-  SiTensorflow,
-  SiPandas,
-  SiFastapi,
-  SiNumpy,
-  SiDocker,
-  SiGithub,
-  SiSupabase,
-  SiFirebase,
-} from 'react-icons/si';
+'use client';
+
+import * as React from 'react';
+import RotatingLogo from '@/components/rotating-logo';
 import { buttonVariants } from '@/components/ui/button';
 import Link from 'next/link';
 import { CloudDownloadIcon, ExternalLinkIcon } from 'lucide-react';
 
-const techLogos = [
-  {
-    node: (
-      <SiPython className="text-gray-400 transition-colors duration-300 hover:text-[#3776AB]" />
-    ),
-    title: 'Python',
-    href: 'https://www.python.org',
-  },
-  {
-    node: (
-      <SiPytorch className="text-gray-400 transition-colors duration-300 hover:text-[#EE4C2C]" />
-    ),
-    title: 'PyTorch',
-    href: 'https://pytorch.org',
-  },
-  {
-    node: (
-      <SiTensorflow className="text-gray-400 transition-colors duration-300 hover:text-[#FF6F00]" />
-    ),
-    title: 'TensorFlow',
-    href: 'https://www.tensorflow.org',
-  },
-  {
-    node: (
-      <SiPandas className="text-gray-400 transition-colors duration-300 hover:text-[#133C58]" />
-    ),
-    title: 'Pandas',
-    href: 'https://pandas.pydata.org',
-  },
-  {
-    node: (
-      <SiNumpy className="text-gray-400 transition-colors duration-300 hover:text-[#013243]" />
-    ),
-    title: 'NumPy',
-    href: 'https://numpy.org',
-  },
-  {
-    node: (
-      <SiReact className="text-gray-400 transition-colors duration-300 hover:text-[#61DAFB]" />
-    ),
-    title: 'React',
-    href: 'https://react.dev',
-  },
-  {
-    node: (
-      <SiNextdotjs className="text-gray-400 transition-colors duration-300 hover:text-[#000000]" />
-    ),
-    title: 'Next.js',
-    href: 'https://nextjs.org',
-  },
-  {
-    node: (
-      <SiFastapi className="text-gray-400 transition-colors duration-300 hover:text-[#009688]" />
-    ),
-    title: 'FastAPI',
-    href: 'https://fastapi.tiangolo.com',
-  },
-  {
-    node: (
-      <SiDocker className="text-gray-400 transition-colors duration-300 hover:text-[#2496ED]" />
-    ),
-    title: 'Docker',
-    href: 'https://www.docker.com',
-  },
-  {
-    node: (
-      <SiGithub className="text-gray-400 transition-colors duration-300 hover:text-[#181717]" />
-    ),
-    title: 'GitHub',
-    href: 'https://github.com',
-  },
-  {
-    node: (
-      <SiSupabase className="text-gray-400 transition-colors duration-300 hover:text-[#3FCF8E]" />
-    ),
-    title: 'Supabase',
-    href: 'https://supabase.com',
-  },
-  {
-    node: (
-      <SiFirebase className="text-gray-400 transition-colors duration-300 hover:text-[#DD2C00]" />
-    ),
-    title: 'Firebase',
-    href: 'https://firebase.google.com',
-  },
-  {
-    node: (
-      <SiFigma className="text-gray-400 transition-colors duration-300 hover:text-[#F24E1E]" />
-    ),
-    title: 'Figma',
-    href: 'https://www.figma.com',
-  },
+const logoGroups = [
+  [
+    '/logos/python-logo.svg',
+    '/logos/numpy-logo.svg',
+    '/logos/supabase-logo.svg',
+  ],
+  [
+    '/logos/github-logo.svg',
+    '/logos/pandas-logo.svg',
+    '/logos/firebase-logo.svg',
+  ],
+  [
+    '/logos/figma-logo.svg',
+    '/logos/pytorch-logo.svg',
+    '/logos/docker-logo.svg',
+  ],
+  [
+    '/logos/nextjs-logo.svg',
+    '/logos/tensorflow-logo.svg',
+    '/logos/fastapi-logo.svg',
+  ],
 ];
 
 export default function Hero() {
+  const rotationStartTime = React.useRef(Date.now()).current;
+
   return (
-    <section className="flex min-h-[calc(100vh-65px)] items-center justify-center pt-45">
+    <section className="flex min-h-[calc(100vh-65px)] items-center justify-center pt-20">
       <div className="mx-auto w-full max-w-6xl text-center">
-        <h1 className="text-4xl text-stone-800 font-bold leading-[1.1] tracking-tight sm:text-5xl md:text-5xl lg:text-6xl px-4">
+        <h1 className="px-4 text-4xl font-bold leading-[1.1] tracking-tight text-[#0C0C0D] sm:text-5xl md:text-5xl lg:text-6xl">
           Data. AI. Products.
-          <br className="text-stone-800 font-italic" /> Built to solve real
-          problems.
+          <br className="font-italic" /> Built to solve real problems.
         </h1>
 
-        <p className="mx-auto mt-10 max-w-3xl text-lg leading-relaxed text-gray-500 sm:text-lg md:text-xl px-4">
+        <p className="mx-auto mt-10 max-w-3xl px-4 text-lg leading-relaxed text-gray-500 sm:text-lg md:text-xl">
           From machine learning models to full-stack applications, I bridge the
           gap between technical possibilities and real-world impact.
         </p>
@@ -134,7 +52,7 @@ export default function Hero() {
             className={buttonVariants({
               variant: 'default',
               className:
-                'h-14 !border-0 bg-slate-500 px-7 text-base font-medium hover:bg-slate-600',
+                'h-12 !rounded-full !border-0 bg-slate-500 px-7 text-base font-medium hover:bg-slate-600',
             })}
           >
             <CloudDownloadIcon aria-hidden="true" />
@@ -148,7 +66,7 @@ export default function Hero() {
             className={buttonVariants({
               variant: 'outline',
               className:
-                'h-14 !border-1 !border-gray-500 px-7 text-base text-gray-500 font-medium hover:text-gray-600 hover:!border-gray-600 hover:bg-white',
+                'h-12 !rounded-full !border-1 !border-gray-500 px-7 text-base font-medium text-gray-500 hover:!border-gray-600 hover:bg-white hover:text-gray-600',
             })}
           >
             Let’s Connect
@@ -156,16 +74,24 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="mt-45 mb-20 px-2 sm:px-5">
-          <LogoLoop
-            logos={techLogos}
-            speed={40}
-            direction="left"
-            logoHeight={45}
-            gap={60}
-            hoverSpeed={0}
-            scaleOnHover
-          />
+        <div className="mt-20 mb-4 text-base text-gray-500 sm:text-lg">
+          TECHNOLOGIES I WORK WITH
+        </div>
+
+        <div className="mb-20 px-5">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
+            {logoGroups.map((logos, index) => (
+              <RotatingLogo
+                key={index}
+                logos={logos}
+                duration={3000}
+                delay={index * 150}
+                startTime={rotationStartTime}
+                aspectRatio={1000 / 400}
+                logoClassName="h-auto w-30 sm:w-35"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

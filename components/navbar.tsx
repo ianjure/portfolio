@@ -45,7 +45,7 @@ export function Navbar() {
             />
 
             <div className="flex items-center gap-2">
-              <span className="text-lg sm:text-xl font-medium text-stone-800">
+              <span className="text-lg sm:text-xl font-medium text-[#0C0C0D]">
                 ianjure
               </span>
 

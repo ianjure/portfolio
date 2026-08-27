@@ -14,7 +14,7 @@ export default function CardioScopePage() {
         />
       </div>
 
-      <h1 className="text-xl font-semibold text-gray-500">
+      <h1 className="text-xl font-semibold text-[#0C0C0D]">
         CardioScope supports accessible cardiac screening by detecting
         abnormalities from phonocardiogram recordings.
       </h1>

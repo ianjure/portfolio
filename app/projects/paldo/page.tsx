@@ -14,7 +14,7 @@ export default function PaldoPage() {
         />
       </div>
 
-      <h1 className="text-xl font-semibold text-gray-500">
+      <h1 className="text-xl font-semibold text-[#0C0C0D]">
         Paldo helps underserved MSMEs access suitable financing using
         alternative data beyond traditional credit history.
       </h1>

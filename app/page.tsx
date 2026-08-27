@@ -42,7 +42,7 @@ export default function Home() {
         <div>
           {/* USTP - CDO */}
           <div className="grid grid-cols-2 py-4 sm:grid-cols-3 sm:items-center">
-            <div className="text-left font-medium text-stone-800">
+            <div className="text-left font-medium text-[#0C0C0D]">
               USTP - CDO
             </div>
 
@@ -59,7 +59,7 @@ export default function Home() {
 
           {/* Symph */}
           <div className="grid grid-cols-2 py-4 sm:grid-cols-3 sm:items-center">
-            <div className="text-left font-medium text-stone-800">Symph</div>
+            <div className="text-left font-medium text-[#0C0C0D]">Symph</div>
 
             <div className="col-span-1 row-start-2 text-left text-slate-500 sm:col-span-1 sm:row-start-auto sm:text-center">
               Business Development Intern
@@ -74,7 +74,7 @@ export default function Home() {
 
           {/* Freelance */}
           <div className="grid grid-cols-2 py-4 sm:grid-cols-3 sm:items-center">
-            <div className="text-left font-medium text-stone-800">
+            <div className="text-left font-medium text-[#0C0C0D]">
               Freelance
             </div>
 

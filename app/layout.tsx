@@ -4,7 +4,6 @@ import { Navbar } from '@/components/navbar';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Footer } from '@/components/footer';
-import CustomCursor from '@/components/custom-cursor';
 
 const instrumentSansHeading = Instrument_Sans({
   subsets: ['latin'],
@@ -40,7 +39,6 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       )}
     >
       <body className="min-h-full flex flex-col bg-white">
-        <CustomCursor />
         <Navbar />
 
         <main className="flex flex-1 justify-center px-2 sm:px-4">
