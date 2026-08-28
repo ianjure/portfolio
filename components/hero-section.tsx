@@ -30,14 +30,17 @@ const logoGroups = [
 ];
 
 export default function Hero() {
-  const rotationStartTime = React.useRef(Date.now()).current;
+  const [rotationStartTime] = React.useState(() => Date.now());
 
   return (
     <section className="flex min-h-[calc(100vh-65px)] items-center justify-center pt-20">
       <div className="mx-auto w-full max-w-6xl text-center">
-        <h1 className="px-4 text-4xl font-bold leading-[1.1] tracking-tight text-[#0C0C0D] sm:text-5xl md:text-5xl lg:text-6xl">
-          Data. AI. Products.
-          <br className="font-italic" /> Built to solve real problems.
+        <h1 className="px-10 text-4xl leading-[1.0] text-[#0C0C0D] sm:px-20 sm:text-5xl md:text-5xl lg:text-6xl">
+          <span className="font-liebling">Data. AI. Products.</span>
+          <br />
+          <span className="text-3xl leading-[0.8] font-mono font-regular italic sm:text-4xl lg:text-5xl">
+            Built to solve real problems.
+          </span>
         </h1>
 
         <p className="mx-auto mt-10 max-w-3xl px-4 text-lg leading-relaxed text-gray-500 sm:text-lg md:text-xl">
@@ -74,7 +77,7 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="mt-20 mb-4 text-base text-gray-500 sm:text-lg">
+        <div className="mt-20 mb-4 font-mono text-base font-normal text-gray-500 sm:text-lg">
           TECHNOLOGIES I WORK WITH
         </div>
 

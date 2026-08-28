@@ -35,7 +35,7 @@ export default function Home() {
       <Hero />
       <HatchSeparator />
       <div className="mx-2 mb-20 sm:mx-5">
-        <div className="mt-10 mb-6 text-base text-gray-500 sm:text-lg">
+        <div className="mt-10 mb-6 font-mono text-base font-normal text-gray-500 sm:text-lg">
           WORK EXPERIENCE
         </div>
 
@@ -90,7 +90,7 @@ export default function Home() {
       </div>
       <HatchSeparator />
       <div className="mx-2 sm:ml-5 sm:mr-5 mb-20">
-        <div className="mt-10 mb-6 text-base sm:text-lg text-gray-500">
+        <div className="mt-10 mb-6 font-mono text-base font-normal text-gray-500 sm:text-lg">
           FEATURED PROJECTS
         </div>
         <div className="space-y-12">
@@ -141,7 +141,9 @@ export default function Home() {
       <HatchSeparator />
       <div className="mx-2 mb-10 sm:mx-5">
         <div className="mt-10 mb-6 flex flex-col items-center gap-6 text-center lg:flex-row lg:items-center lg:justify-between lg:text-left">
-          <div className="text-base text-gray-500 sm:text-lg">GET IN TOUCH</div>
+          <div className="font-mono text-base font-normal text-gray-500 sm:text-lg">
+            GET IN TOUCH
+          </div>
 
           <nav className="flex flex-col items-center gap-2 text-base lg:flex-row lg:items-center lg:gap-10">
             {SOCIAL_LINKS.map((link) => {

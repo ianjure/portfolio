@@ -1,23 +1,28 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Instrument_Sans } from 'next/font/google';
+import { DM_Mono, Figtree } from 'next/font/google';
+import localFont from 'next/font/local';
 import { Navbar } from '@/components/navbar';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Footer } from '@/components/footer';
 
-const instrumentSansHeading = Instrument_Sans({
+const figtree = Figtree({
   subsets: ['latin'],
-  variable: '--font-heading',
+  variable: '--font-figtree',
 });
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const dmMono = DM_Mono({
+  weight: ['400', '500'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
+  variable: '--font-dm-mono',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+const liebling = localFont({
+  src: './fonts/Liebling-Bold.woff2',
+  weight: '700',
+  style: 'normal',
+  variable: '--font-liebling',
 });
 
 export const metadata: Metadata = {
@@ -33,9 +38,9 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       className={cn(
         'h-full',
         'antialiased',
-        geistSans.variable,
-        geistMono.variable,
-        instrumentSansHeading.variable,
+        figtree.variable,
+        dmMono.variable,
+        liebling.variable,
       )}
     >
       <body className="min-h-full flex flex-col bg-white">
