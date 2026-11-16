@@ -5,7 +5,7 @@ export default function BlueShiftPage() {
     <div className="px-5 py-5 mb-5">
       <div className="relative mb-5 aspect-[1600/980] w-full overflow-hidden rounded-[16px]">
         <Image
-          src="/images/blueshift-merge.png"
+          src="/images/blueshift-merge.webp"
           alt="BlueShift"
           fill
           priority

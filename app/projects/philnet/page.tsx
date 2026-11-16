@@ -5,7 +5,7 @@ export default function PhiLNetPage() {
     <div className="px-5 py-5 mb-5">
       <div className="relative mb-5 aspect-[1600/980] w-full overflow-hidden rounded-[16px]">
         <Image
-          src="/images/philnet-merge.png"
+          src="/images/philnet-merge.webp"
           alt="PhiLNet"
           fill
           priority

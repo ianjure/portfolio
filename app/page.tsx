@@ -95,12 +95,12 @@ export default function Home() {
         </div>
         <div className="space-y-12">
           <ProjectCard
-            mainImage="/images/blueshift-main.png"
+            mainImage="/images/blueshift-main.webp"
             slides={[
-              '/images/blueshift-1.png',
-              '/images/blueshift-2.png',
-              '/images/blueshift-3.png',
-              '/images/blueshift-4.png',
+              '/images/blueshift-1.webp',
+              '/images/blueshift-2.webp',
+              '/images/blueshift-3.webp',
+              '/images/blueshift-4.webp',
             ]}
             title="Satellite-Based Ocean and Fisheries Intelligence"
             award="NASA SPACE APPS CHALLENGE 2026"
@@ -109,12 +109,12 @@ export default function Home() {
             href="/projects/blueshift"
           />
           <ProjectCard
-            mainImage="/images/philnet-main.png"
+            mainImage="/images/philnet-main.webp"
             slides={[
-              '/images/philnet-1.png',
-              '/images/philnet-2.png',
-              '/images/philnet-3.png',
-              '/images/philnet-4.png',
+              '/images/philnet-1.webp',
+              '/images/philnet-2.webp',
+              '/images/philnet-3.webp',
+              '/images/philnet-4.webp',
             ]}
             title="Real-Time Multimodal Phishing Detection System"
             award="TECHNICAL EXCELLENCE AWARD"
@@ -123,12 +123,12 @@ export default function Home() {
             href="/projects/philnet"
           />
           <ProjectCard
-            mainImage="/images/cardioscope-main.png"
+            mainImage="/images/cardioscope-main.webp"
             slides={[
-              '/images/cardioscope-1.png',
-              '/images/cardioscope-2.png',
-              '/images/cardioscope-3.png',
-              '/images/cardioscope-4.png',
+              '/images/cardioscope-1.webp',
+              '/images/cardioscope-2.webp',
+              '/images/cardioscope-3.webp',
+              '/images/cardioscope-4.webp',
             ]}
             title="Early Detection of Heart Disease Through Sound"
             award="BPI-DOST INNOVATION AWARDS 2025 WINNER"
@@ -137,12 +137,12 @@ export default function Home() {
             href="/projects/cardioscope"
           />
           <ProjectCard
-            mainImage="/images/paldo-main.png"
+            mainImage="/images/paldo-main.webp"
             slides={[
-              '/images/paldo-1.png',
-              '/images/paldo-2.png',
-              '/images/paldo-3.png',
-              '/images/paldo-4.png',
+              '/images/paldo-1.webp',
+              '/images/paldo-2.webp',
+              '/images/paldo-3.webp',
+              '/images/paldo-4.webp',
             ]}
             title="Alternative Credit Scoring and Financing for MSMEs"
             award="YBLL 2.0 IDEATHON CHAMPION"
