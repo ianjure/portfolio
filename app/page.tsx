@@ -95,6 +95,20 @@ export default function Home() {
         </div>
         <div className="space-y-12">
           <ProjectCard
+            mainImage="/images/blueshift-main.png"
+            slides={[
+              '/images/blueshift-1.png',
+              '/images/blueshift-2.png',
+              '/images/blueshift-3.png',
+              '/images/blueshift-4.png',
+            ]}
+            title="Satellite-Based Ocean and Fisheries Intelligence"
+            award="NASA SPACE APPS CHALLENGE 2026"
+            name="BlueShift"
+            description="Analyze how changing ocean conditions affect Philippine fisheries using satellite data."
+            href="/projects/blueshift"
+          />
+          <ProjectCard
             mainImage="/images/philnet-main.png"
             slides={[
               '/images/philnet-1.png',
