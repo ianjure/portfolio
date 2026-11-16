@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function CardioScopePage() {
   return (
-    <div className="px-5 py-5">
+    <div className="px-5 py-5 mb-5">
       <div className="relative mb-5 aspect-[1600/980] w-full overflow-hidden rounded-[16px]">
         <Image
           src="/images/cardioscope-merge.png"
@@ -30,6 +30,24 @@ export default function CardioScopePage() {
         accuracy and Best Project of the Year recognition at the BPI-DOST
         Innovation Awards 2025.
       </p>
+
+      <div className="flex items-center justify-center gap-8">
+        <Image
+          src="/logos/bpi-logo.svg"
+          alt="BPI Logo"
+          width={200}
+          height={100}
+          className="h-12 w-auto object-contain"
+        />
+
+        <Image
+          src="/logos/dost-logo.svg"
+          alt="DOST Logo"
+          width={200}
+          height={100}
+          className="h-12 w-auto object-contain"
+        />
+      </div>
     </div>
   );
 }

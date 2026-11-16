@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function PhiLNetPage() {
   return (
-    <div className="px-5 py-5">
+    <div className="px-5 py-5 mb-5">
       <div className="relative mb-5 aspect-[1600/980] w-full overflow-hidden rounded-[16px]">
         <Image
           src="/images/philnet-merge.png"
@@ -28,6 +28,24 @@ export default function PhiLNetPage() {
         the system as a FastAPI web service with a browser extension prototype
         and received the department’s Technical Excellence Award.
       </p>
+
+      <div className="flex items-center justify-center gap-8">
+        <Image
+          src="/logos/ustp-logo.svg"
+          alt="USTP Logo"
+          width={200}
+          height={100}
+          className="h-12 w-auto object-contain"
+        />
+
+        <Image
+          src="/logos/ds-logo.svg"
+          alt="DS Logo"
+          width={200}
+          height={100}
+          className="h-12 w-auto object-contain"
+        />
+      </div>
     </div>
   );
 }

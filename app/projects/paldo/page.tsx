@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function PaldoPage() {
   return (
-    <div className="px-5 py-5">
+    <div className="px-5 py-5 mb-5">
       <div className="relative mb-5 aspect-[1600/980] w-full overflow-hidden rounded-[16px]">
         <Image
           src="/images/paldo-merge.png"
@@ -31,6 +31,24 @@ export default function PaldoPage() {
         the technical direction of the concept that won 1st Place at the Young
         Banatao Learning Lab 2.0 Ideathon.
       </p>
+
+      <div className="flex items-center justify-center gap-8">
+        <Image
+          src="/logos/phildev-logo.svg"
+          alt="PhilDev Logo"
+          width={200}
+          height={100}
+          className="h-10 w-auto object-contain"
+        />
+
+        <Image
+          src="/logos/factset-logo.svg"
+          alt="FactSet Logo"
+          width={200}
+          height={100}
+          className="h-6 w-auto object-contain"
+        />
+      </div>
     </div>
   );
 }

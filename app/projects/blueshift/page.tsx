@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function BlueShiftPage() {
   return (
-    <div className="px-5 py-5">
+    <div className="px-5 py-5 mb-5">
       <div className="relative mb-5 aspect-[1600/980] w-full overflow-hidden rounded-[16px]">
         <Image
           src="/images/blueshift-merge.png"
@@ -27,6 +27,24 @@ export default function BlueShiftPage() {
         analysis of ocean conditions and their relationship with Philippine
         fisheries production for the NASA Space Apps Challenge 2026.
       </p>
+
+      <div className="flex items-center justify-center gap-8">
+        <Image
+          src="/logos/nasa-logo.svg"
+          alt="NASA Logo"
+          width={200}
+          height={100}
+          className="h-12 w-auto object-contain"
+        />
+
+        <Image
+          src="/logos/spaceapps-logo.svg"
+          alt="NASA Space Apps Challenge Logo"
+          width={200}
+          height={100}
+          className="h-12 w-auto object-contain"
+        />
+      </div>
     </div>
   );
 }
