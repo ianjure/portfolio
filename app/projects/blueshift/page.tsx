@@ -28,13 +28,13 @@ export default function BlueShiftPage() {
         fisheries production for the NASA Space Apps Challenge 2026.
       </p>
 
-      <div className="flex items-center justify-center gap-6 sm:gap-8">
+      <div className="flex items-center justify-center gap-8">
         <Image
           src="/logos/nasa-logo.svg"
           alt="NASA Logo"
           width={200}
           height={100}
-          className="h-8 w-auto object-contain sm:h-12"
+          className="h-12 w-auto object-contain"
         />
 
         <Image
@@ -42,7 +42,7 @@ export default function BlueShiftPage() {
           alt="NASA Space Apps Challenge Logo"
           width={200}
           height={100}
-          className="h-8 w-auto object-contain sm:h-12"
+          className="h-12 w-auto object-contain"
         />
       </div>
     </div>

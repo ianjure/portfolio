@@ -31,13 +31,13 @@ export default function CardioScopePage() {
         Innovation Awards 2025.
       </p>
 
-      <div className="flex items-center justify-center gap-6 sm:gap-8">
+      <div className="flex items-center justify-center gap-8">
         <Image
           src="/logos/bpi-logo.svg"
           alt="BPI Logo"
           width={200}
           height={100}
-          className="h-8 w-auto object-contain sm:h-12"
+          className="h-12 w-auto object-contain"
         />
 
         <Image
@@ -45,7 +45,7 @@ export default function CardioScopePage() {
           alt="DOST Logo"
           width={200}
           height={100}
-          className="h-8 w-auto object-contain sm:h-12"
+          className="h-12 w-auto object-contain"
         />
       </div>
     </div>

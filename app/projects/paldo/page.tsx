@@ -32,37 +32,23 @@ export default function PaldoPage() {
         Banatao Learning Lab 2.0 Ideathon.
       </p>
 
-      <div className="flex items-center justify-center gap-6 sm:gap-8">
+      <div className="flex items-center justify-center gap-8">
         <Image
           src="/logos/phildev-logo.svg"
           alt="PhilDev Logo"
-          width={620}
-          height={200}
-          className="partner-logo"
+          width={200}
+          height={100}
+          className="h-10 w-auto object-contain"
         />
 
         <Image
           src="/logos/factset-logo.svg"
           alt="FactSet Logo"
-          width={620}
-          height={200}
-          className="partner-logo"
+          width={200}
+          height={100}
+          className="h-6 w-auto object-contain"
         />
       </div>
-
-      <style>{`
-        .partner-logo {
-          height: 24px;
-          width: auto;
-          object-fit: contain;
-        }
-
-        @media (min-width: 640px) {
-          .partner-logo {
-            height: 40px;
-          }
-        }
-      `}</style>
     </div>
   );
 }
