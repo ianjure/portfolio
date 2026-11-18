@@ -29,13 +29,13 @@ export default function PhiLNetPage() {
         and received the department’s Technical Excellence Award.
       </p>
 
-      <div className="flex items-center justify-center gap-8">
+      <div className="flex items-center justify-center gap-6 sm:gap-8">
         <Image
           src="/logos/ustp-logo.svg"
           alt="USTP Logo"
           width={200}
           height={100}
-          className="h-12 w-auto object-contain"
+          className="h-8 w-auto object-contain sm:h-12"
         />
 
         <Image
@@ -43,7 +43,7 @@ export default function PhiLNetPage() {
           alt="DS Logo"
           width={200}
           height={100}
-          className="h-12 w-auto object-contain"
+          className="h-8 w-auto object-contain sm:h-12"
         />
       </div>
     </div>
